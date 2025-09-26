@@ -1,0 +1,82 @@
+.time-zone-page {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.time-zone-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-zone-input select, .time-zone-input button {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.time-zone-input button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.date-range-picker {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.time-grid-container {
+    width: 100%;
+    overflow: auto;
+    max-height: 70vh; /* Limit height to enable vertical scrolling */
+    white-space: nowrap;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    min-width: 60px; /* Ensure columns have a minimum width */
+}
+
+/* --- Sticky Header and Column Styles --- */
+
+thead th {
+    background-color: #f2f2f2;
+    position: sticky;
+    z-index: 2;
+}
+
+.time-zone-header {
+    left: 0;
+    z-index: 3 !important; /* Must be higher than other sticky elements */
+}
+
+.date-header {
+    top: 0;
+}
+
+.hour-header {
+    top: 38px; /* Adjust based on the height of the date-header row */
+}
+
+.time-zone-cell {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    border-right: 2px solid #ccc; /* Add a border to visually separate it */
+}
